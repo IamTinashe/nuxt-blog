@@ -68,7 +68,6 @@ export default {
         email: this.email,
         password: this.password,
       };
-      console.log(data);
       try {
         const res = await this.$axios.post("/register", data);
         console.log(res);

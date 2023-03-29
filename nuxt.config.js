@@ -80,9 +80,16 @@ module.exports = {
           login: { url: '/login', method: 'post'},
           refresh: { url: '/token/refresh/', method: 'post' },
           user: { url: '/user', method: 'get' },
-          logout: { url: '/logout', method: 'post'}
+          logout: { url: '/logout', method: 'post'},
+          blogs: { url: '/allposts/', method: 'get'}
         },
       }
+    },
+    redirect: {
+      login: '/login',
+      logout: '/',
+      callback: '/login',
+      home: '/blog'
     }
   },
 
