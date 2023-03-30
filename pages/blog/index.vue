@@ -2,9 +2,10 @@
   <div>
     <v-card
       class="mx-auto"
-      max-width="50%"
+      width="45%"
       v-for="(post, index) in posts"
       :key="index"
+      style="float: left; margin: 2% 2% !important;"
     >
       <v-img
         src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
@@ -13,8 +14,8 @@
       ></v-img>
 
       <v-card-title> {{ post.title }} </v-card-title>
-
-      <v-card-subtitle> {{ post.tags }} </v-card-subtitle>
+      <p style="margin-left: 15px;"> {{ post.content }} </p>
+      <v-card-subtitle style="margin-left: 15px; font-size: 12px;"> {{ post.tags }} </v-card-subtitle>
 
       <v-card-actions>
         <NuxtLink :to="'/blog/' + post.id + '/'">
