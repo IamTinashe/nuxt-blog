@@ -18,7 +18,7 @@
       <v-card-subtitle style="margin-left: 15px; font-size: 12px;"> {{ post.tags }} </v-card-subtitle>
 
       <v-card-actions>
-        <NuxtLink :to="'/blog/' + post.id + '/'">
+        <NuxtLink :to="'/blog/view/' + post.id + '/'">
           <v-btn color="orange-lighten-2" variant="text"> Read </v-btn>
         </NuxtLink>
       </v-card-actions>

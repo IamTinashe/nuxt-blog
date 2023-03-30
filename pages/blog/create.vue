@@ -30,7 +30,7 @@
       clear
     </v-btn>
   </form>
-  <p v-if="success==true">Submitted Successfully <br> {{ data }}</p>
+  <p v-else>Submitted Successfully <br> {{ data }}</p>
 </div>
 </template>
 
@@ -43,7 +43,7 @@ export default {
       content: '',
       tags: '',
       error: false,
-      succes: false,
+      success: false,
       data: {}
     };
   },
