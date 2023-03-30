@@ -23,7 +23,12 @@
       async getPost() {
         try{
           this.author_id = 2;
-          const res = await this.$axios.get("/post/view/" + this.$route.params.id + "/");
+          let config = {
+            headers : {
+              'Authorization': `Bearer ${localStorage.getItem('access_token')}`,
+            }
+          }
+          const res = await this.$axios.get("/post/view/" + this.$route.params.id + "/", config);
           return res.data.data;
         }catch(e){
           console.error(e)

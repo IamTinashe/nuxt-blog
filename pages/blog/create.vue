@@ -51,7 +51,12 @@ export default {
     async submit() {
       try{
         this.author_id = 2;
-        const res = await this.$axios.post("/post/add/", { author_id: this.author_id, title: this.title, content: this.content, tags: this.tags});
+        let config = {
+            headers : {
+              'Authorization': `Bearer ${localStorage.getItem('access_token')}`,
+            }
+          }
+        const res = await this.$axios.post("/post/add/", { author_id: this.author_id, title: this.title, content: this.content, tags: this.tags}, config);
         this.success = true    
         this.data = res.data;
       }catch(e){
