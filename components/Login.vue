@@ -53,6 +53,7 @@ export default {
         const response = await this.$auth.loginWith("local", { data: data });
         this.$auth.$storage.setUniversal("email", response.data.email);
         await this.$auth.setUserToken(response.data.access_token, response.data.refresh_token);
+        this.$router.push({path: "/blog"})
       } catch (e) {
         console.log(e.message);
       }
